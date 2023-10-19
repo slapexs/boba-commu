@@ -2,6 +2,9 @@ import type { Metadata } from "next"
 import { Prompt } from "next/font/google"
 import "./globals.css"
 
+// Components
+import Navbar from "@/components/Navbar"
+
 const prompt = Prompt({
 	subsets: ["thai", "latin"],
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -19,7 +22,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" data-theme="cupcake">
-			<body className={prompt.className}>{children}</body>
+			<body className={prompt.className}>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	)
 }
