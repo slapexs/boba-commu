@@ -1,12 +1,9 @@
 import React from "react"
 
-import favicon from "../../public/favicon.png"
-import Image from "next/image"
-
 const Navbar = () => {
 	return (
 		<>
-			<nav className="navbar bg-base-100 w-screen flex justify-center drop-shadow-sm">
+			<nav className="navbar bg-base-100 w-screen flex justify-center drop-shadow-sm fixed top-0 z-10">
 				<main className="w-11/12">
 					<div className="flex-1">
 						<a className="font-bold normal-case text-3xl">BOBA</a>
@@ -25,10 +22,10 @@ const Navbar = () => {
 									<summary>Profile</summary>
 									<ul className="p-2 bg-base-100">
 										<li>
-											<a>Edit profile</a>
+											<a>โปรไฟล์</a>
 										</li>
 										<li>
-											<a>Sign out</a>
+											<a>ออกจากระบบ</a>
 										</li>
 									</ul>
 								</details>
