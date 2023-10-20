@@ -1,4 +1,5 @@
 import CardPost from "@/components/CardPost"
+import PostForm from "@/components/PostForm"
 import React from "react"
 
 const Home = () => {
@@ -6,23 +7,18 @@ const Home = () => {
 	return (
 		// Feed layout
 		<>
-			<main className="min-h-screen py-24 w-screen flex justify-center">
-				<div className="w-11/12 grid grid-cols-5 grid-flow-row-dense gap-x-5 ">
+			<main className="min-h-screen w-screen flex justify-center">
+				<div className="grid grid-cols-12 p-24 gap-x-5">
 					{/* Feed */}
-					<aside className="col-span-3 gap-y-10 grid">
+					<aside className="grid gap-y-10 col-span-8">
 						{elem.map((elem, index) => {
 							return <CardPost key={index} />
 						})}
 					</aside>
 
 					{/* Action control */}
-					<aside>
-						<div className="fixed">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
-							aut nostrum ipsam nam amet provident voluptas repellendus id
-							minima maxime minus inventore laborum neque natus at tempore
-							voluptatibus illo? Deserunt.
-						</div>
+					<aside className="col-span-4">
+						<PostForm />
 					</aside>
 				</div>
 			</main>
