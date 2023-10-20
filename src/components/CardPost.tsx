@@ -6,7 +6,7 @@ import ThumbUpLineIcon from "remixicon-react/ThumbUpLineIcon"
 import Chat1LineIcon from "remixicon-react/Chat1LineIcon"
 import ChatBubbleStart from "./ChatBubbleStart"
 import ChatBubbleEnd from "./ChatBubbleEnd"
-import ReplyLineIcon from "remixicon-react/ReplyLineIcon"
+import SendPlane2LineIcon from "remixicon-react/SendPlane2LineIcon"
 
 const CardPost = () => {
 	return (
@@ -37,17 +37,17 @@ const CardPost = () => {
 								<div className="flex gap-x-5 items-end">
 									<div className="flex gap-x-2">
 										<ThumbUpLineIcon
-											className="text-accent hover:cursor-pointer"
+											className="opacity-60 hover:cursor-pointer"
 											size={20}
 										/>
-										<small className="text-accent">123</small>
+										<small className="opacity-60">123</small>
 									</div>
 									<div className="flex gap-x-2">
 										<Chat1LineIcon
-											className="text-accent hover:cursor-pointer"
+											className="opacity-60 hover:cursor-pointer"
 											size={20}
 										/>
-										<small className="text-accent">4</small>
+										<small className="opacity-60">4</small>
 									</div>
 									<p className="text-right text-xs opacity-60">20/10/2023</p>
 								</div>
@@ -90,13 +90,10 @@ const CardPost = () => {
 											placeholder="แสดงความคิดเห็น"
 											className="w-full input input-md input-bordered join-item"
 										/>
-										<button className="btn btn-base-200 join-item rounded-r-full">
-											<ReplyLineIcon />
+										<button className="btn btn-primary text-white join-item rounded-r-full">
+											<SendPlane2LineIcon />
 										</button>
 									</div>
-									<label className="label">
-										<span className="label-text-alt opacity-60">128</span>
-									</label>
 								</div>
 							</section>
 						</div>
