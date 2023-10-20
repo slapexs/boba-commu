@@ -3,9 +3,13 @@ import Image, { StaticImageData } from "next/image"
 import StatProfile from "./StatProfile"
 type Props = {
 	avatar: StaticImageData
+	disableEdit?: boolean
 }
 
-export default function UserProfileHeader({ avatar }: Props) {
+export default function UserProfileHeader({
+	avatar,
+	disableEdit = false,
+}: Props) {
 	return (
 		<div className="flex gap-5">
 			<div>
@@ -20,7 +24,7 @@ export default function UserProfileHeader({ avatar }: Props) {
 			<div className="gap-3 flex flex-col">
 				<h1 className="text-2xl mt-4 font-semibold">Firstname lastname</h1>
 				<StatProfile />
-				<button type="button" className="btn  w-fit">
+				<button type="button" className="btn w-fit" disabled={disableEdit}>
 					แก้ไขโปรไฟล์
 				</button>
 			</div>
