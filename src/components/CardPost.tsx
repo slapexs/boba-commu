@@ -8,7 +8,11 @@ import ChatBubbleStart from "./ChatBubbleStart"
 import ChatBubbleEnd from "./ChatBubbleEnd"
 import SendPlane2LineIcon from "remixicon-react/SendPlane2LineIcon"
 
-const CardPost = () => {
+type IPost = {
+	showComment?: boolean
+}
+
+const CardPost = ({ showComment = true }: IPost) => {
 	return (
 		<>
 			<div className="card w-full bg-base-100 shadow-sm border">
@@ -23,7 +27,7 @@ const CardPost = () => {
 						</div>
 						<div className="col-span-9">
 							<p className="font-semibold">Profile name</p>
-							<p className="font-light text-primary-content text-justify">
+							<p className="font-light text-primary-content ">
 								ฮัมเคลื่อนย้าย ฮองเฮาท็อปบูตเลิฟตัวเอง นิรันดร์
 								ศากยบุตรคณาญาติสไลด์บาร์บี้โง่เขลา
 								เพรียวบางเบญจมบพิตรแรงผลักเอ๋อ เยอบีราเรซินเทเลกราฟโปรเจ็คท์
@@ -54,48 +58,50 @@ const CardPost = () => {
 							</section>
 
 							{/* Comment */}
-							<div className="divider"></div>
-							<section>
-								<ChatBubbleStart
-									user="Obi-Wan Kenobi"
-									image={avatar}
-									comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
-									time="12:45"
-								/>
-								<ChatBubbleStart
-									user="Obi-Wan Kenobi"
-									image={avatar}
-									comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
-									time="12:45"
-								/>
-								<ChatBubbleStart
-									user="Obi-Wan Kenobi"
-									image={avatar}
-									comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
-									time="12:45"
-								/>
+							{showComment && (
+								<section>
+									<div className="divider"></div>
+									<ChatBubbleStart
+										user="Obi-Wan Kenobi"
+										image={avatar}
+										comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
+										time="12:45"
+									/>
+									<ChatBubbleStart
+										user="Obi-Wan Kenobi"
+										image={avatar}
+										comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
+										time="12:45"
+									/>
+									<ChatBubbleStart
+										user="Obi-Wan Kenobi"
+										image={avatar}
+										comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
+										time="12:45"
+									/>
 
-								<ChatBubbleEnd
-									user="Obi-Wan Kenobi"
-									image={avatar}
-									comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
-									time="12:45"
-								/>
+									<ChatBubbleEnd
+										user="Obi-Wan Kenobi"
+										image={avatar}
+										comment="แดนซ์ แครอทรีพอร์ท แฮนด์สเปคแฟลชซาบะ"
+										time="12:45"
+									/>
 
-								{/* Comment input */}
-								<div className="w-full mt-5">
-									<div className="join w-full">
-										<input
-											type="text"
-											placeholder="แสดงความคิดเห็น"
-											className="w-full input input-md input-bordered join-item"
-										/>
-										<button className="btn btn-primary text-white join-item rounded-r-full">
-											<SendPlane2LineIcon />
-										</button>
+									{/* Comment input */}
+									<div className="w-full mt-5">
+										<div className="join w-full">
+											<input
+												type="text"
+												placeholder="แสดงความคิดเห็น"
+												className="w-full input input-md input-bordered join-item"
+											/>
+											<button className="btn btn-primary text-white join-item rounded-r-full">
+												<SendPlane2LineIcon />
+											</button>
+										</div>
 									</div>
-								</div>
-							</section>
+								</section>
+							)}
 						</div>
 					</div>
 				</div>
