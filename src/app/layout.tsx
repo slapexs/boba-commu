@@ -24,7 +24,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" data-theme="cupcake">
-			<body className={BaiJamjuree.className}>
+			<body
+				className={`${BaiJamjuree.className} min-h-screen w-screen flex justify-center p-24`}
+			>
 				<Navbar />
 				{children}
 			</body>
