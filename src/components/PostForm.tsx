@@ -3,8 +3,10 @@ import React from "react"
 export default function PostForm() {
 	return (
 		<>
-			<main className="sticky top-24">
-				<h1 className="text-xl opacity-60 ">แชร์เรื่องราวสักหน่อยไหม?</h1>
+			<main>
+				<h1 className="text-lg font-semibold opacity-60 ">
+					แชร์เรื่องราวสักหน่อยไหม?
+				</h1>
 
 				<section className="mt-4">
 					<textarea
