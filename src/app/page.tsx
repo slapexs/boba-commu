@@ -1,5 +1,6 @@
 import CardPost from "@/components/CardPost"
 import PostForm from "@/components/PostForm"
+import SuggestUser from "@/components/SuggestUser"
 import React from "react"
 
 const Home = () => {
@@ -18,7 +19,12 @@ const Home = () => {
 
 					{/* Action control */}
 					<aside className="col-span-4">
-						<PostForm />
+						<div className="sticky top-24 grid gap-10">
+							<PostForm />
+
+							{/* Suggest user */}
+							<SuggestUser />
+						</div>
 					</aside>
 				</div>
 			</main>
