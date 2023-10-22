@@ -20,41 +20,42 @@ export default function Login() {
 					<div className="card-body">
 						<h1 className="card-title">เข้าสู่ระบบ</h1>
 						<hr />
+						<div className="gap-4 flex flex-col">
+							{/* Alert */}
+							{isError && <InlineAlert title="lorem" type={1} />}
 
-						{/* Alert */}
-						{isError && <InlineAlert title="lorem" type={1} />}
+							<input
+								type="text"
+								name="email"
+								className="input input-md input-bordered"
+								placeholder="johnza007@email.com"
+								required={true}
+								onChange={(e) => setEmail(e.target.value)}
+								autoComplete="off"
+							/>
 
-						<input
-							type="text"
-							name="email"
-							className="input input-md input-bordered"
-							placeholder="johnza007@email.com"
-							required={true}
-							onChange={(e) => setEmail(e.target.value)}
-							autoComplete="off"
-						/>
+							<input
+								type="password"
+								name="password"
+								className="input input-md input-bordered"
+								placeholder="รหัสผ่าน"
+								required={true}
+								onChange={(e) => setPassword(e.target.value)}
+								autoComplete="off"
+							/>
 
-						<input
-							type="password"
-							name="password"
-							className="input input-md input-bordered"
-							placeholder="รหัสผ่าน"
-							required={true}
-							onChange={(e) => setPassword(e.target.value)}
-							autoComplete="off"
-						/>
+							<button
+								type="button"
+								onClick={SubmitFormLogin}
+								className="btn btn-primary text-white"
+							>
+								ตกลง
+							</button>
 
-						<button
-							type="button"
-							onClick={SubmitFormLogin}
-							className="btn btn-primary text-white"
-						>
-							ตกลง
-						</button>
-
-						<Link href="/register" className="btn btn-link">
-							สมัครสมาชิก
-						</Link>
+							<Link href="/register" className="btn btn-link">
+								สมัครสมาชิก
+							</Link>
+						</div>
 					</div>
 				</form>
 			</main>
